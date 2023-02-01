@@ -1,0 +1,102 @@
+<Calc>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        size: (root.width, root.height)
+
+        TextInput:
+            id: calc_input
+            text: "0"
+            halign: "right"
+            font_size: 65
+            size_hint: 1, .15
+        
+        MDGridLayout:
+            cols: 4
+            rows: 5
+
+            #Cols
+            Button:
+                size_hint:(.2,.2)
+                font_size: 32
+                text: '%'
+            Button:
+                size_hint:(.2,.2)
+                font_size: 32
+                text:'C'
+            Button:
+                size_hint:(.2,.2)
+                font_size: 32
+                text:'\u00AB'
+            Button:
+                size_hint:(.2,.2)
+                font_size: 32
+                text:'/'
+            
+            #Rows
+            Button:
+                size_hint:(.2,.2)
+                font_size:32
+                text:'7'
+            Button:
+                size_hint:(.2,.2)
+                font_size:32
+                text:'8'
+            Button:
+                size_hint:(.2,.2)
+                font_size:32
+                text:'9'
+            Button:
+                size_hint:(.2,.2)
+                font_size:32
+                text:'*'
+            
+            Button:
+                size_hint:(.2,.2)
+                font_size:32
+                text:'4'
+            Button:
+                size_hint:(.2,.2)
+                font_size:32
+                text:'5'
+            Button:
+                size_hint:(.2,.2)
+                font_size:32
+                text:'6'
+            Button:
+                size_hint:(.2,.2)
+                font_size:32
+                text:'+'
+            
+            Button:
+                size_hint:(.2,.2)
+                font_size:32
+                text:'1'
+            Button:
+                size_hint:(.2,.2)
+                font_size:32
+                text:'2'
+            Button:
+                size_hint:(.2,.2)
+                font_size:32
+                text:'3'
+            Button:
+                size_hint:(.2,.2)
+                font_size:32
+                text:'-'
+            
+            Button:
+                size_hint:(.2,.2)
+                font_size:32
+                text:'0'
+            Button:
+                size_hint:(.2,.2)
+                font_size:32
+                text:'+/-'
+            Button:
+                size_hint:(.2,.2)
+                font_size:32
+                text:'.'
+            Button:
+                size_hint:(.2,.2)
+                font_size:32
+                text:'='

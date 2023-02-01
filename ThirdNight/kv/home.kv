@@ -1,0 +1,51 @@
+#:import NoTransition kivy.uix.screenmanager.NoTransition
+
+<Home>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MyScreen:
+            id: myscr
+            transition: NoTransition()
+            MDScreen:
+                name:"home"
+                MDLabel:
+                    text: "Home Screen"
+                    halign: "center"
+        Navbar:
+            size_hint_y: 0.085
+            md_bg_color: 1,1,1,1
+            elevation: 2
+            MDGridLayout:
+                cols: 3
+                pos_hint: {'center_x': 0.5,'center_y': 0.5}
+                adaptive_width: True
+                spacing: '30dp'
+                MDIconButton:
+                    id: btn1
+                    icon: 'home'
+                    icon_size: '25dp'
+                    theme_text_color: 'Custom'
+                    text_color: 1,0,0,1
+                    on_release:
+                        myscr.current = 'home'
+                        root.navbar_click(self)
+                MDIconButton:
+                    id: btn2
+                    icon: 'cog'
+                    icon_size: '25dp'
+                    theme_text_color: 'Custom'
+                    text_color: 0,0,0,1
+                    on_release:
+                        root.setting_btn()
+                        myscr.current = 'setting'
+                        root.navbar_click(self)
+                MDIconButton:
+                    id: btn3
+                    icon: 'calculator'
+                    icon_size: '25dp'
+                    theme_text_color: 'Custom'
+                    text_color: 0,0,0,1
+                    on_release:
+                        root.calc_btn()
+                        myscr.current = 'calc'
+                        root.navbar_click(self)
