@@ -3,9 +3,11 @@ from kivy.lang import Builder
 from kivymd.uix.floatlayout import MDFloatLayout
 from kivymd.uix.behaviors import CommonElevationBehavior
 from kivymd.uix.screenmanager import ScreenManager
-from .settings import Setting
+
+from .setting import Setting
 from .calc import Calc
 from .login import Login
+from .third import Third
 
 class Login_scr(Login):
     name = 'login'
@@ -15,6 +17,9 @@ class Calc_scr(Calc):
 
 class Setting_scr(Setting):
     name = 'setting'
+
+class Third_scr(Third):
+    name = 'third'
 
 class Navbar(CommonElevationBehavior, MDFloatLayout):
     pass
@@ -29,6 +34,7 @@ class Home(MDScreen):
         self.btn1 = 0
         self.btn2 = 0
         self.btn3 = 0
+        self.btn4 = 0
 
     def setting_btn(self):
         if self.btn1 == 0:
@@ -44,10 +50,17 @@ class Home(MDScreen):
         else:
             pass
     
-    def login_btn(self):
+    def third_btn(self):
         if self.btn3 == 0:
-            self.ids.myscr.add_widget(Login_scr())
+            self.ids.myscr.add_widget(Third_scr())
             self.btn3 += 1
+        else:
+            pass
+    
+    def login_btn(self):
+        if self.btn4 == 0:
+            self.ids.myscr.add_widget(Login_scr())
+            self.btn4 += 1
         else:
             pass
 

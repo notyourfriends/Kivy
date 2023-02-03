@@ -16,7 +16,7 @@
             md_bg_color: 1,1,1,1
             elevation: 2
             MDGridLayout:
-                cols: 4
+                cols: 5
                 pos_hint: {'center_x': 0.5,'center_y': 0.5}
                 adaptive_width: True
                 spacing: '30dp'
@@ -51,6 +51,16 @@
                         root.navbar_click(self)
                 MDIconButton:
                     id: btn4
+                    icon: 'alarm'
+                    icon_size: '25dp'
+                    theme_text_color: 'Custom'
+                    text_color: 0,0,0,1
+                    on_release:
+                        root.third_btn()
+                        myscr.current = 'third'
+                        root.navbar_click(self)
+                MDIconButton:
+                    id: btn5
                     icon: 'login'
                     icon_size: '25dp'
                     theme_text_color: 'Custom'
