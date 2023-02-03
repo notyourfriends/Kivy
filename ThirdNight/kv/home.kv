@@ -16,7 +16,7 @@
             md_bg_color: 1,1,1,1
             elevation: 2
             MDGridLayout:
-                cols: 3
+                cols: 4
                 pos_hint: {'center_x': 0.5,'center_y': 0.5}
                 adaptive_width: True
                 spacing: '30dp'
@@ -48,4 +48,14 @@
                     on_release:
                         root.calc_btn()
                         myscr.current = 'calc'
+                        root.navbar_click(self)
+                MDIconButton:
+                    id: btn4
+                    icon: 'login'
+                    icon_size: '25dp'
+                    theme_text_color: 'Custom'
+                    text_color: 0,0,0,1
+                    on_release:
+                        root.login_btn()
+                        myscr.current = 'login'
                         root.navbar_click(self)

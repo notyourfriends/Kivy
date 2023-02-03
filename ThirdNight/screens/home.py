@@ -5,6 +5,10 @@ from kivymd.uix.behaviors import CommonElevationBehavior
 from kivymd.uix.screenmanager import ScreenManager
 from .settings import Setting
 from .calc import Calc
+from .login import Login
+
+class Login_scr(Login):
+    name = 'login'
 
 class Calc_scr(Calc):
     name = 'calc'
@@ -24,6 +28,7 @@ class Home(MDScreen):
         super().__init__(**kwargs)
         self.btn1 = 0
         self.btn2 = 0
+        self.btn3 = 0
 
     def setting_btn(self):
         if self.btn1 == 0:
@@ -36,6 +41,13 @@ class Home(MDScreen):
         if self.btn2 == 0:
             self.ids.myscr.add_widget(Calc_scr())
             self.btn2 += 1
+        else:
+            pass
+    
+    def login_btn(self):
+        if self.btn3 == 0:
+            self.ids.myscr.add_widget(Login_scr())
+            self.btn3 += 1
         else:
             pass
 
